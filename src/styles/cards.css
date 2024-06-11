@@ -11,6 +11,7 @@
   flex-direction: column;
   justify-content: space-between;
   color: white;
+  margin: 50px;
 }
 
 .exit-button{
@@ -67,7 +68,7 @@
   margin-bottom: 5px;
 }
 
-.birthday-warning, .card-header-span-note{
+.birthday-warning, .card-header-span-note, .password-privacy-note{
   color: rgba(255, 255, 255, 0.3);
   font-size: 0.9rem;
 }
@@ -96,6 +97,7 @@
   border-radius: 25px;
   margin-bottom: 20px;
   cursor: pointer;
+  width: 100%;
 }
 
 /* VERIVIFICATION CARD */
@@ -105,7 +107,7 @@
 
 
 .verification-note{
-  color: blue;
+  color: hsl(206, 95%, 55%);
   cursor: pointer;
   margin-top: 5px;
   font-size: 0.9rem;
@@ -114,4 +116,21 @@
 .verfication-card-content-container{
   display: flex;
   flex-direction: column;
+}
+
+/* PASSWORD CARD */
+
+.password-card-footer-container{
+  width: 100%;
+}
+
+.password-privacy-note{
+  font-size: 0.8rem;
+  line-height: 15px;
+  margin-bottom: 30px;
+}
+
+.link{
+  cursor: pointer;
+  color: hsl(206, 95%, 55%);
 }

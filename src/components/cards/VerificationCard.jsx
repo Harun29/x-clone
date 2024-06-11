@@ -1,3 +1,5 @@
+import '../../styles/cards.css'
+
 const VerivicationCard = () => {
   return ( 
     <form className='card-form'>
