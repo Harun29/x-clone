@@ -2,21 +2,21 @@ import '../../styles/cards.css'
 
 const CreateAccountCard = () => {
   return ( 
-    <form className='create-account-card'>
+    <form className='card-form'>
       <button className="exit-button">X</button>
 
       <div className="card-logo">
         <img src="xlogo.png" alt="" />
       </div>
 
-      <span className='create-your-account-span'>Create your account</span>
+      <span className='card-header-span'>Create your account</span>
 
-      <div className="name-input-card">
+      <div className="card-input">
         <input type="text" placeholder='Name'/>
         <div className="word-counter-card"></div>
       </div>
 
-      <div className="email-input-card">
+      <div className="card-input">
         <input type="text" placeholder='Email'/>
         <div className="word-counter-card"></div>
       </div>
@@ -47,7 +47,7 @@ const CreateAccountCard = () => {
         </select>
       </div>
 
-      <button className='next-button'>Next</button>
+      <button className='card-next-button'>Next</button>
 
     </form>
    );
