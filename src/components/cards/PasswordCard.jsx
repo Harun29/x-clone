@@ -13,7 +13,7 @@ const PasswordCard = () => {
         <span className="card-header-span-note">Make sure it's 8 characters or more.</span>
 
         <div className="card-input">
-          <input type="text" placeholder='Password'/>
+          <input type="password" placeholder='Password'/>
           <div className="word-counter-card"></div>
         </div>
       </div>

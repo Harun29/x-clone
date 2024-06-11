@@ -5,11 +5,13 @@ const CreateAccountCard = () => {
     <form className='card-form'>
       <button className="exit-button">X</button>
 
-      <div className="card-logo">
-        <img src="xlogo.png" alt="" />
-      </div>
+      <div>
+        <div className="card-logo">
+          <img src="xlogo.png" alt="" />
+        </div>
 
-      <span className='card-header-span'>Create your account</span>
+        <span className='card-header-span'>Create your account</span>
+      </div>
 
       <div className="card-input">
         <input type="text" placeholder='Name'/>
