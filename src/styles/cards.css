@@ -214,3 +214,73 @@
   background-color: rgb(37, 37, 37);
   border-radius: 10px;
 }
+
+/* SIGN IN */
+
+.sign-in-card{
+  align-items: center;
+  width: 500px;
+  height: 700px;
+  justify-content:flex-start;
+}
+
+.sign-in-card-content-container{
+  width: 65%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+}
+
+.third-party-signup svg{
+  margin-right: 5px;
+}
+
+.third-party-signup{
+  width: 40%;
+  height: 50px;
+  border-radius: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.sign-in-bottom-buttons, .sign-in-top-buttons{
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.sign-in-bottom-buttons button{
+  height: 100%;
+}
+
+.or-statement-in-signup{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 30px 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.or-statement-in-signup div{
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3); 
+}
+
+.or-statement-in-signup span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in-card-content-container p{
+  margin-top: 50px;
+}
