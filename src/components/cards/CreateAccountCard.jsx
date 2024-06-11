@@ -1,9 +1,12 @@
 import '../../styles/cards.css'
+import XIcon from "../../icons/XIcon"
 
 const CreateAccountCard = () => {
   return ( 
     <form className='card-form'>
-      <button className="exit-button">X</button>
+      <button className="exit-button">
+        <XIcon />
+      </button>
 
       <div>
         <div className="card-logo">

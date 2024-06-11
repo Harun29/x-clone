@@ -1,9 +1,12 @@
 import '../../styles/cards.css'
+import BackIcon from "../../icons/BackIcon"
 
 const VerivicationCard = () => {
   return ( 
     <form className='card-form'>
-      <button className="exit-button">X</button>
+      <button className="exit-button">
+        <BackIcon />
+      </button>
 
       <div className="verfication-card-content-container">
         <div className="card-logo">

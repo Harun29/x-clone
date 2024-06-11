@@ -15,7 +15,7 @@ const FollowInitialAccountsCard = () => {
       </div>
 
       <div className='follow-account-in-card'>
-        <span className='follow-accounts-note'>Follow 1 or more account</span>
+        <span className='follow-accounts-note'>Follow 1 or more accounts</span>
         <div className='accounts-container-in-card'>
           <FollowUserElement />
           <FollowUserElement />
