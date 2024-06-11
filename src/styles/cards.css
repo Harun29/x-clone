@@ -51,6 +51,10 @@
   height: 50px;
 }
 
+.card-input input:focus{
+  outline: 2px solid hsl(206, 95%, 55%);
+}
+
 .card-input input{
   padding-left: 15px;
   font-size: 1rem;

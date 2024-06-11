@@ -14,7 +14,6 @@ const PasswordCard = () => {
 
         <div className="card-input">
           <input type="password" placeholder='Password'/>
-          <div className="word-counter-card"></div>
         </div>
       </div>
 
