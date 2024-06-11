@@ -56,3 +56,17 @@ code {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.3);
 }
+
+/* NOTES */
+
+.note{
+  font-size: 0.8rem;
+  line-height: 15px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.link{
+  cursor: pointer;
+  color: hsl(206, 95%, 55%);
+}

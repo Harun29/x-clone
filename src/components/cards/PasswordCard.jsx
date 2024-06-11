@@ -18,7 +18,7 @@ const PasswordCard = () => {
       </div>
 
       <div className='password-card-footer-container'>
-        <p className="password-privacy-note">By signing up, you agree to the <a className='link'>Terms of Service</a> and <a className='link'> Privacy Policy</a>, including<a className='link'> Cookie Use </a>. X may use your contact information, including your email address and phone number for purposes outlined in our Privacy Policy, like keeping your account secure and personalizing our services, including ads.<a className='link'> Learn more</a>. Others will be able to find you by email or phone number when provided unless you choose otherwise<a className='link'> here</a>.</p>
+        <p className="note">By signing up, you agree to the <a className='link'>Terms of Service</a> and <a className='link'> Privacy Policy</a>, including<a className='link'> Cookie Use </a>. X may use your contact information, including your email address and phone number for purposes outlined in our Privacy Policy, like keeping your account secure and personalizing our services, including ads.<a className='link'> Learn more</a>. Others will be able to find you by email or phone number when provided unless you choose otherwise<a className='link'> here</a>.</p>
         <button className='card-next-button'>Sign up</button>
       </div>
 

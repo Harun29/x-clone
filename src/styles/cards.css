@@ -135,17 +135,6 @@
   width: 100%;
 }
 
-.password-privacy-note{
-  font-size: 0.8rem;
-  line-height: 15px;
-  margin-bottom: 30px;
-}
-
-.link{
-  cursor: pointer;
-  color: hsl(206, 95%, 55%);
-}
-
 /* PROFILE PICTURE CARD */
 
 .skip-button{
