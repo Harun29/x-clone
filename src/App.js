@@ -6,12 +6,14 @@ import SignInCard from './components/cards/SignInCard';
 import UsernameCard from './components/cards/UsernameCard';
 import VerivicationCard from './components/cards/VerificationCard';
 import SignUpPage from './components/pages/SignUpPage';
+import LoginPasswordCard from './components/cards/LoginPasswordCard';
 
 function App() {
   return (
     <div className="App">
       <SignUpPage />
       <SignInCard />
+      <LoginPasswordCard />
       <CreateAccountCard />
       <VerivicationCard />
       <PasswordCard />

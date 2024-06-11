@@ -51,6 +51,10 @@
   height: 50px;
 }
 
+input[type="text"][disabled] {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .card-input input:focus{
   outline: 2px solid hsl(206, 95%, 55%);
 }
@@ -283,4 +287,10 @@
 
 .sign-in-card-content-container p{
   margin-top: 50px;
+}
+
+/* LOGIN PASSWORD CARD */
+
+.card-input-sign-in{
+  margin-top: 25px;
 }
