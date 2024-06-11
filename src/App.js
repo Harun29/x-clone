@@ -1,4 +1,5 @@
 import CreateAccountCard from './components/cards/CreateAccountCard';
+import FollowInitialAccountsCard from './components/cards/FollowInitialAccountsCard';
 import PasswordCard from './components/cards/PasswordCard';
 import ProfilePictureCard from './components/cards/ProfilePictureCard';
 import UsernameCard from './components/cards/UsernameCard';
@@ -12,6 +13,7 @@ function App() {
       <PasswordCard />
       <ProfilePictureCard />
       <UsernameCard />
+      <FollowInitialAccountsCard />
     </div>
   );
 }

@@ -1,0 +1,31 @@
+/* FOLLOW USER ELEMENT */
+
+.follow-user-element-container{
+  width: 100%;
+  height: 80px;
+  background-color: inherit;
+  color: white;
+}
+
+.follow-user-top-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.follow-user-info{
+  display: flex;
+}
+
+.follow-user-names{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  align-items: start;
+  justify-content: center;
+}
+
+.follow-user-bottom-section{
+  margin: 0 0 0 60px;
+  font-size: 0.9rem;
+}
