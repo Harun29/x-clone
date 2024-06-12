@@ -38,6 +38,9 @@
   width: 600px;
   /* shange later to 100% */
   display: flex;
+
+  margin: 50px;
+  /* change - delete margin */
 }
 
 .post-element-users-info{

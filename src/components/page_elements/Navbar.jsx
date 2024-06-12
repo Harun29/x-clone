@@ -4,6 +4,7 @@ import SearchIcon from "../../icons/SearchIcon";
 import BookmarkIcon from "../../icons/BookmarkIcon"
 import ProfileIcon from "../../icons/ProfileIcon"
 import SettingsIcon from "../../icons/SettingsIcon"
+import DotsIcon from "../../icons/DotsIcon";
 
 const Navbar = () => {
   return (
@@ -35,11 +36,14 @@ const Navbar = () => {
         <button className="navbar-post-button">Post</button>
       </div>
       <div className="navbar-bottom-section">
-        <img src="test-profile-picture.jpg" alt="" className="small-profile-picture"/>
-        <div className="navbar-users-names">
-          <span className="users-name">Harun</span>
-          <span className="users-at">@Harun2903</span>
+        <div className="navbar-bottom-section-user-info">
+          <img src="test-profile-picture.jpg" alt="" className="small-profile-picture"/>
+          <div className="navbar-users-names">
+            <span className="users-name">Harun</span>
+            <span className="users-at">@Harun2903</span>
+          </div>
         </div>
+        <DotsIcon />
       </div>
     </div>
     );
