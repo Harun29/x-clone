@@ -1,11 +1,10 @@
 import AppleIcon from "../../icons/AppleIcon";
 import GoogleIcon from "../../icons/GoogleIcon";
-import "../../styles/pages.css"
+import "../../styles/pages.css";
 
 const SignUpPage = () => {
-  return ( 
+  return (
     <div className="signup-page">
-
       <div className="signup-left-side">
         <img className="signup-x-logo" src="xlogo.png" alt="" />
       </div>
@@ -27,14 +26,18 @@ const SignUpPage = () => {
           <div className="white-line"></div>
         </div>
         <button className="create-account-button">Create account</button>
-        <p className="note sign-up-note">By singing up, you agree to the <a className="link">Terms of Services</a> and <a className="link">Privacy Policy</a>, including <a className="link">Cookie Use.</a></p>
+        <p className="note sign-up-note">
+          By singing up, you agree to the{" "}
+          <a className="link">Terms of Services</a> and{" "}
+          <a className="link">Privacy Policy</a>, including{" "}
+          <a className="link">Cookie Use.</a>
+        </p>
 
         <p className="already-have-acc">Already have an account?</p>
         <button className="sign-in-button">Sign in</button>
       </div>
-
     </div>
-   );
-}
- 
+  );
+};
+
 export default SignUpPage;

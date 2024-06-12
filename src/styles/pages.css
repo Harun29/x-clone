@@ -1,6 +1,6 @@
 /* SIGNUP PAGE */
 
-.signup-page{
+.signup-page {
   width: calc(100vw - 17px);
   height: 100vh;
   display: flex;
@@ -9,26 +9,26 @@
   justify-content: center;
 }
 
-.signup-page h1{
+.signup-page h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
 }
 
-.signup-page h3{
+.signup-page h3 {
   font-size: 2rem;
 }
 
-.signup-left-side{
+.signup-left-side {
   width: 50%;
   display: flex;
   justify-content: center;
 }
 
-.signup-x-logo{
+.signup-x-logo {
   width: 40%;
 }
 
-.or-statement{
+.or-statement {
   width: 40%;
   display: grid;
   grid-template-columns: 1fr 30px 1fr;
@@ -37,18 +37,18 @@
   margin-bottom: 5px;
 }
 
-.or-statement div{
+.or-statement div {
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.3); 
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
-.or-statement span{
+.or-statement span {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.signup-right-side{
+.signup-right-side {
   width: 50%;
   align-items: center;
   display: flex;
@@ -58,17 +58,17 @@
   color: white;
 }
 
-.third-party-signup{
+.third-party-signup {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.third-party-signup svg{
+.third-party-signup svg {
   margin-right: 5px;
 }
 
-.signup-page button{
+.signup-page button {
   width: 40%;
   height: 50px;
   border-radius: 25px;
@@ -78,21 +78,21 @@
   font-size: 1rem;
 }
 
-.already-have-acc{
+.already-have-acc {
   font-weight: 700;
 }
 
-.sign-up-note{
+.sign-up-note {
   width: 40%;
 }
 
-.create-account-button{
+.create-account-button {
   background-color: hsl(206, 95%, 55%);
   color: inherit;
   border: none;
 }
 
-.sign-in-button{
+.sign-in-button {
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: hsl(206, 95%, 55%);
@@ -100,7 +100,7 @@
 
 /* NAVBAR */
 
-.navbar-container{
+.navbar-container {
   width: 300px;
   height: 900px;
   /* change to 100% later */
@@ -115,15 +115,15 @@
   /* change - delete margin later */
 }
 
-.navbra-top-section div:nth-child(1):hover{
+.navbra-top-section div:nth-child(1):hover {
   background-color: white;
 }
 
-.navbar-element img{
+.navbar-element img {
   height: 100%;
 }
 
-.navbar-element{
+.navbar-element {
   height: 40px;
   padding: 10px 20px;
   font-size: 1.2rem;
@@ -134,19 +134,19 @@
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.2s ease;
-  }
-  
-.navbar-element:hover{
+}
+
+.navbar-element:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.navbar-element svg{
+.navbar-element svg {
   height: 100%;
   width: 30px;
   margin-right: 15px;
 }
 
-.navbar-post-button{
+.navbar-post-button {
   width: 80%;
   margin: 20px 0;
   background-color: hsl(206, 95%, 55%);
@@ -160,11 +160,11 @@
   transition: all 0.2s ease;
 }
 
-.navbar-post-button:hover{
+.navbar-post-button:hover {
   background-color: hsl(206, 95%, 45%);
 }
 
-.navbar-bottom-section{
+.navbar-bottom-section {
   width: calc(100% - 50px);
   margin: 0 10px 30px 0;
   padding: 10px 20px;
@@ -176,19 +176,19 @@
   align-items: center;
 }
 
-.navbar-bottom-section img{
+.navbar-bottom-section img {
   margin-right: 15px;
 }
 
-.navbar-bottom-section div{
+.navbar-bottom-section div {
   display: flex;
 }
 
-.navbar-bottom-section:hover{
+.navbar-bottom-section:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.navbar-users-names{
+.navbar-users-names {
   display: flex;
   flex-direction: column;
 }

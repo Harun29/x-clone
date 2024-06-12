@@ -1,4 +1,4 @@
-const SettingsIcon = ({stroke}) => {
+const SettingsIcon = ({ stroke }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

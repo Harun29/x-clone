@@ -5,10 +5,14 @@ import ArrowsIcon from "../../icons/ArrowsIcon";
 import DotsIcon from "../../icons/DotsIcon";
 
 const PostElement = () => {
-  return ( 
+  return (
     <div className="post-element">
       <div className="post-element-left-side">
-        <img src="test-profile-picture.jpg" alt="" className="small-profile-picture"/>
+        <img
+          src="test-profile-picture.jpg"
+          alt=""
+          className="small-profile-picture"
+        />
       </div>
       <div className="post-element-right-side">
         <div className="post-element-users-info-and-settings">
@@ -22,7 +26,11 @@ const PostElement = () => {
             </div>
           </div>
         </div>
-        <p className="post-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum nunc vel gravida sodales. Vivamus tempus scelerisque sem. Quisque ornare eget urna in pellentesque. Vivamus sed urna enim.</p>
+        <p className="post-paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+          dictum nunc vel gravida sodales. Vivamus tempus scelerisque sem.
+          Quisque ornare eget urna in pellentesque. Vivamus sed urna enim.
+        </p>
         <div className="post-element-interactions">
           <div className="post-element-comment">
             <div className="post-element-comment-icon">
@@ -50,7 +58,7 @@ const PostElement = () => {
         </div>
       </div>
     </div>
-   );
-}
- 
+  );
+};
+
 export default PostElement;

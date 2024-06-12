@@ -1,9 +1,9 @@
-import "../../styles/pages.css"
-import HomeIcon from "../../icons/HomeIcon"
+import "../../styles/pages.css";
+import HomeIcon from "../../icons/HomeIcon";
 import SearchIcon from "../../icons/SearchIcon";
-import BookmarkIcon from "../../icons/BookmarkIcon"
-import ProfileIcon from "../../icons/ProfileIcon"
-import SettingsIcon from "../../icons/SettingsIcon"
+import BookmarkIcon from "../../icons/BookmarkIcon";
+import ProfileIcon from "../../icons/ProfileIcon";
+import SettingsIcon from "../../icons/SettingsIcon";
 import DotsIcon from "../../icons/DotsIcon";
 
 const Navbar = () => {
@@ -37,7 +37,11 @@ const Navbar = () => {
       </div>
       <div className="navbar-bottom-section">
         <div className="navbar-bottom-section-user-info">
-          <img src="test-profile-picture.jpg" alt="" className="small-profile-picture"/>
+          <img
+            src="test-profile-picture.jpg"
+            alt=""
+            className="small-profile-picture"
+          />
           <div className="navbar-users-names">
             <span className="users-name">Harun</span>
             <span className="users-at">@Harun2903</span>
@@ -46,7 +50,7 @@ const Navbar = () => {
         <DotsIcon />
       </div>
     </div>
-    );
-}
- 
+  );
+};
+
 export default Navbar;

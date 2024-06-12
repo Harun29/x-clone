@@ -1,9 +1,9 @@
-import '../../styles/cards.css'
-import XIcon from "../../icons/XIcon"
+import "../../styles/cards.css";
+import XIcon from "../../icons/XIcon";
 
 const CreateAccountCard = () => {
-  return ( 
-    <form className='card-form'>
+  return (
+    <form className="card-form">
       <button className="exit-button">
         <XIcon />
       </button>
@@ -13,26 +13,28 @@ const CreateAccountCard = () => {
           <img src="xlogo.png" alt="" />
         </div>
 
-        <span className='card-header-span'>Create your account</span>
+        <span className="card-header-span">Create your account</span>
       </div>
 
       <div className="card-input">
-        <input type="text" placeholder='Name'/>
+        <input type="text" placeholder="Name" />
         <div className="word-counter-card"></div>
       </div>
 
       <div className="card-input">
-        <input type="text" placeholder='Email'/>
+        <input type="text" placeholder="Email" />
         <div className="word-counter-card"></div>
       </div>
 
-      <div className='birthday-note'>
+      <div className="birthday-note">
         <span className="date-of-birth">Date of birth</span>
-        <span className="birthday-warning">This will not be shown publicaly. Confirm your age, even if this account is for bussiness, a pet, or something else.</span>
+        <span className="birthday-warning">
+          This will not be shown publicaly. Confirm your age, even if this
+          account is for bussiness, a pet, or something else.
+        </span>
       </div>
 
-      
-      <div className='create-account-birthday'>
+      <div className="create-account-birthday">
         <select name="month" id="month">
           <option value="Jan">Jan</option>
           <option value="Feb">Feb</option>
@@ -52,10 +54,9 @@ const CreateAccountCard = () => {
         </select>
       </div>
 
-      <button className='card-next-button'>Next</button>
-
+      <button className="card-next-button">Next</button>
     </form>
-   );
-}
- 
+  );
+};
+
 export default CreateAccountCard;
