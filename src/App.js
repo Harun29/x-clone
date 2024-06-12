@@ -7,11 +7,13 @@ import UsernameCard from './components/cards/UsernameCard';
 import VerivicationCard from './components/cards/VerificationCard';
 import SignUpPage from './components/pages/SignUpPage';
 import LoginPasswordCard from './components/cards/LoginPasswordCard';
+import Navbar from './components/page_elements/Navbar';
 
 function App() {
   return (
     <div className="App">
       <SignUpPage />
+      <Navbar />
       <SignInCard />
       <LoginPasswordCard />
       <CreateAccountCard />
