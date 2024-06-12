@@ -1,5 +1,5 @@
 import "../../styles/cards.css";
-import FollowUserElement from "../elements/FollowUserElement";
+import FollowUserElement from "../small_elements/FollowUserElement";
 
 const FollowInitialAccountsCard = () => {
   return (
