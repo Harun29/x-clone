@@ -141,3 +141,72 @@
 .post-paragraph {
   margin: 0 0 10px;
 }
+
+/* search element */
+
+.search-element{
+  margin: 50px;
+  /* change -delete margin later */
+  width: 400px;
+  /* change to 100% later */
+  height: 20px;
+  display: grid;
+  align-content: center;
+  grid-template-columns: auto 1fr auto;
+  padding: 15px 10px;
+  background-color: hsl(214, 10%, 14%);
+  border-radius: 50px;
+  border: 1px solid hsl(214, 10%, 14%);
+}
+
+.search-element-search-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  color: hsl(214, 10%, 40%);
+}
+
+.search-element-input{
+  background-color: hsl(214, 10%, 14%);
+  color: white;
+  font-size: 1rem;
+  border: none;
+}
+
+.search-element-input:focus{
+  outline: none;
+  background-color: inherit;
+}
+  
+.search-element:focus-within{
+  border: 1px solid hsl(206, 95%, 55%);
+  background-color: black;
+}
+
+.search-element:focus-within .search-element-search-icon{
+  color: hsl(206, 95%, 55%);
+}
+
+.search-element-x-button{
+  display: none;
+  background-color: hsl(206, 95%, 55%);
+  border-radius: 50%;
+  border: none;
+  height: 30px;
+  width: 30px;
+  color: black;
+}
+
+.search-element-input:focus ~ .search-element-x-button{
+  display: block;
+}
+
+.search-element-x-button svg{
+  margin-left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+

@@ -9,11 +9,16 @@ import SignUpPage from "./components/pages/SignUpPage";
 import LoginPasswordCard from "./components/cards/LoginPasswordCard";
 import Navbar from "./components/page_elements/Navbar";
 import PostElement from "./components/small_elements/PostElement";
+import SearchElement from "./components/small_elements/SearchElement";
 
 function App() {
   return (
     <div className="App">
+
       <SignUpPage />
+
+      <SearchElement />
+      
       <PostElement />
       <Navbar />
 
