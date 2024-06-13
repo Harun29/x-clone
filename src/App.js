@@ -13,6 +13,7 @@ import SearchElement from "./components/small_elements/SearchElement";
 import LocationCard from "./components/cards/LocationCard";
 import CreateBioCard from "./components/cards/CreateBioCard";
 import SaveChangesCard from "./components/cards/SaveChangesCard";
+import PickHeaderCard from "./components/cards/PickHeaderCard";
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
       <LocationCard />
       <CreateBioCard/>
       <SaveChangesCard />
+      <PickHeaderCard />
+      
       
       {/* page elements */}
       <PostElement />
