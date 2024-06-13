@@ -1,6 +1,18 @@
+import { useEffect, useState } from "react";
 import "../../styles/elements.css";
 
-const FollowUserElement = () => {
+const FollowUserElement = ({description}) => {
+
+  const [showDescription, setShowDescription] = useState(true);
+
+  useEffect(() => {
+    if (!description && description != undefined){
+      setShowDescription(false)
+    }else{
+      setShowDescription(true)
+    }
+  }, [description])
+
   return (
     <div className="follow-user-element-container">
       <div className="follow-user-top-section">
@@ -19,9 +31,9 @@ const FollowUserElement = () => {
         <button className="follow-button">Follow</button>
       </div>
 
-      <p className="follow-user-bottom-section">
-        This is my random shor description
-      </p>
+      {showDescription ? <p className="follow-user-bottom-section">
+        This is my random short description
+      </p> : null}
     </div>
   );
 };

@@ -2,7 +2,7 @@
 
 .follow-user-element-container {
   width: 100%;
-  height: 80px;
+  padding: 10px 0;
   background-color: inherit;
   color: white;
 }
@@ -36,7 +36,9 @@
   color: white;
   /* change later to inherit*/
   width: 600px;
-  /* shange later to 100% */
+  /* change later to 100% */
+  height: 200px;
+  /* change - delete height later */
   display: flex;
 
   margin: 50px;
@@ -208,4 +210,35 @@
   height: 100%;
 }
 
+/* who to follow element */
 
+.who-to-follow{
+  width: 310px;
+  height: 260px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  border-radius: 16px;
+  border: 1px solid rgb(47, 51, 54);
+  /* DEFAULT BORDER */
+  margin: 50px;
+  /* change - delete margin later */
+}
+
+.who-to-follow .link{
+  background: none;
+  border: none;
+}
+
+.who-to-follow-span{
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.who-to-follow-users-container{
+  width: 100%;
+}

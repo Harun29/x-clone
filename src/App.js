@@ -14,6 +14,7 @@ import LocationCard from "./components/cards/LocationCard";
 import CreateBioCard from "./components/cards/CreateBioCard";
 import SaveChangesCard from "./components/cards/SaveChangesCard";
 import PickHeaderCard from "./components/cards/PickHeaderCard";
+import WhoToFollowElement from "./components/small_elements/WhoToFollowElement";
 
 function App() {
   return (
@@ -21,30 +22,41 @@ function App() {
 
       <SignUpPage />
 
-      <SearchElement />
-
+      <h1 className="temporary-note">Profile customization</h1>
+      <div className="temporary-div">
       {/* customize profle */}
       <LocationCard />
       <CreateBioCard/>
       <SaveChangesCard />
       <PickHeaderCard />
+      </div>
       
-      
+      <h1 className="temporary-note">Page elements</h1>
       {/* page elements */}
+      <div className="temporary-div">
       <PostElement />
+      <SearchElement />
       <Navbar />
+      <WhoToFollowElement />
+      </div>
 
+      <h1 className="temporary-note">Sign in cards</h1>
       {/* sign in - in this order */}
+      <div className="temporary-div">
       <SignInCard />
       <LoginPasswordCard />
+      </div>
 
+      <h1 className="temporary-note">Sign up cards</h1>
       {/* sign up - in this order */}
+      <div className="temporary-div">
       <CreateAccountCard />
       <VerivicationCard />
       <PasswordCard />
       <ProfilePictureCard />
       <UsernameCard />
       <FollowInitialAccountsCard />
+      </div>
     </div>
   );
 }

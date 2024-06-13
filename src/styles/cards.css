@@ -21,9 +21,21 @@
   background: none;
   border: none;
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 10px;
+  left: 10px;
   padding: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exit-button:hover{
+  background-color: rgb(37, 37, 37);
 }
 
 .card-logo {
@@ -116,6 +128,11 @@ input[type="text"][disabled] {
 .card-next-button {
   color: black;
   background-color: white;
+  transition: all 0.1s ease;
+}
+
+.card-next-button:hover{
+  background-color: rgb(235, 235, 235);
 }
 
 /* VERIVIFICATION CARD */
@@ -147,6 +164,11 @@ input[type="text"][disabled] {
   color: white;
   background-color: black;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.1s ease;
+}
+
+.skip-button:hover {
+  background-color: rgb(27, 27, 27);
 }
 
 .white-moved-border {

@@ -12,6 +12,21 @@ code {
     monospace;
 }
 
+.temporary-note{
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.temporary-div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+  margin: 0 300px;
+}
+
 /* BUTTONS */
 
 .follow-button {
@@ -23,6 +38,11 @@ code {
   padding: 0 20px;
   font-weight: 700;
   cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.follow-button:hover{
+  background-color: rgb(235, 235, 235);
 }
 
 .unfollow-button {
