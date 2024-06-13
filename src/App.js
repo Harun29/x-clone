@@ -10,6 +10,7 @@ import LoginPasswordCard from "./components/cards/LoginPasswordCard";
 import Navbar from "./components/page_elements/Navbar";
 import PostElement from "./components/small_elements/PostElement";
 import SearchElement from "./components/small_elements/SearchElement";
+import LocationCard from "./components/cards/LocationCard";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <SignUpPage />
 
       <SearchElement />
+      <LocationCard />
       
       <PostElement />
       <Navbar />
