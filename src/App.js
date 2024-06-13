@@ -11,6 +11,7 @@ import Navbar from "./components/page_elements/Navbar";
 import PostElement from "./components/small_elements/PostElement";
 import SearchElement from "./components/small_elements/SearchElement";
 import LocationCard from "./components/cards/LocationCard";
+import CreateBioCard from "./components/cards/CreateBioCard";
 
 function App() {
   return (
@@ -19,8 +20,12 @@ function App() {
       <SignUpPage />
 
       <SearchElement />
+
+      {/* customize profle */}
       <LocationCard />
+      <CreateBioCard/>
       
+      {/* page elements */}
       <PostElement />
       <Navbar />
 
