@@ -276,6 +276,12 @@ input[type="text"][disabled] {
   align-items: center;
   justify-content: center;
   width: 100%;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.third-party-signup:hover{
+  background-color: rgb(230, 230, 230);
 }
 
 .sign-in-bottom-buttons,

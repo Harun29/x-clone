@@ -19,9 +19,10 @@
 }
 
 .signup-left-side {
-  width: 50%;
+  width: calc(50% - 40px);
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 
 .signup-x-logo {
@@ -49,13 +50,14 @@
 }
 
 .signup-right-side {
-  width: 50%;
+  width: calc(50% - 40px);
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   color: white;
+  padding: 20px;
 }
 
 .third-party-signup {
@@ -90,12 +92,22 @@
   background-color: hsl(206, 95%, 55%);
   color: inherit;
   border: none;
+  transition: all 0.2s ease;
+}
+
+.create-account-button:hover{
+  background-color: hsl(206, 95%, 45%);
 }
 
 .sign-in-button {
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: hsl(206, 95%, 55%);
+  transition: all 0.2s ease;
+}
+
+.sign-in-button:hover{
+  background-color: hsl(206, 95%, 5%);
 }
 
 /* NAVBAR */
