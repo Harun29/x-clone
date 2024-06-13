@@ -12,6 +12,7 @@ import PostElement from "./components/small_elements/PostElement";
 import SearchElement from "./components/small_elements/SearchElement";
 import LocationCard from "./components/cards/LocationCard";
 import CreateBioCard from "./components/cards/CreateBioCard";
+import SaveChangesCard from "./components/cards/SaveChangesCard";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       {/* customize profle */}
       <LocationCard />
       <CreateBioCard/>
+      <SaveChangesCard />
       
       {/* page elements */}
       <PostElement />
