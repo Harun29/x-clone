@@ -17,49 +17,51 @@ import PickHeaderCard from "./components/cards/PickHeaderCard";
 import WhoToFollowElement from "./components/small_elements/WhoToFollowElement";
 import NewPostElment from "./components/small_elements/NewPostElement";
 import NewPostCard from "./components/cards/NewPostCard";
+import HomePage from "./components/pages/HomePage";
 
 function App() {
   return (
     <div className="App">
 
-      <SignUpPage />
-      <NewPostCard />
+      <HomePage />
+      {/* <SignUpPage /> */}
+      {/* <NewPostCard /> */}
 
-      <h1 className="temporary-note">Profile customization</h1>
+      {/* <h1 className="temporary-note">Profile customization</h1> */}
       <div className="temporary-div">
       {/* customize profle */}
-      <LocationCard />
+      {/* <LocationCard />
       <CreateBioCard/>
       <SaveChangesCard />
-      <PickHeaderCard />
+      <PickHeaderCard /> */}
       </div>
       
-      <h1 className="temporary-note">Page elements</h1>
+      {/* <h1 className="temporary-note">Page elements</h1> */}
       {/* page elements */}
       <div className="temporary-div">
-      <NewPostElment />
+      {/* <NewPostElment />
       <PostElement />
       <SearchElement />
       <WhoToFollowElement />
-      <Navbar />
+      <Navbar /> */}
       </div>
 
-      <h1 className="temporary-note">Sign in cards</h1>
+      {/* <h1 className="temporary-note">Sign in cards</h1> */}
       {/* sign in - in this order */}
       <div className="temporary-div">
-      <SignInCard />
-      <LoginPasswordCard />
+      {/* <SignInCard />
+      <LoginPasswordCard /> */}
       </div>
 
-      <h1 className="temporary-note">Sign up cards</h1>
+      {/* <h1 className="temporary-note">Sign up cards</h1> */}
       {/* sign up - in this order */}
       <div className="temporary-div">
-      <CreateAccountCard />
+      {/* <CreateAccountCard />
       <VerivicationCard />
       <PasswordCard />
       <ProfilePictureCard />
       <UsernameCard />
-      <FollowInitialAccountsCard />
+      <FollowInitialAccountsCard /> */}
       </div>
     </div>
   );

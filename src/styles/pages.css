@@ -113,18 +113,14 @@
 /* NAVBAR */
 
 .navbar-container {
-  width: 300px;
-  height: 900px;
-  /* change to 100% later */
+  width: 100%;
+  height: 100%;
   background-color: black;
   /* change to inherit later */
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  margin: 50px;
-  /* change - delete margin later */
 }
 
 .navbra-top-section div:nth-child(1):hover {
@@ -203,4 +199,36 @@
 .navbar-users-names {
   display: flex;
   flex-direction: column;
+}
+
+/* home page */
+
+.home-page{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.home-page-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+.home-page-posts-section{
+  width: calc(100% - 630px);
+}
+.home-page-navbar-section{
+  position: fixed;
+  left: 10%;
+  height: 100%;
+  width: 300px;
+}
+.home-page-right-section{
+  position: fixed;
+  right: 10%;
+  height: 100%;
+  width: 300px;
 }
