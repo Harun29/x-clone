@@ -102,19 +102,22 @@
 .post-element-like-icon,
 .post-element-retweet-icon,
 .post-element-bookmark-icon,
-.post-element-settings-icon {
+.post-element-settings-icon,
+.new-post-icon {
   height: 35px;
   width: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .post-element-comment,
 .post-element-retweet,
 .post-element-like,
-.post-element-bookmark {
+.post-element-bookmark,
+.new-post-icon {
   transition: all 0.2s ease;
 }
 .post-element-comment:hover,
@@ -124,7 +127,8 @@
 }
 .post-element-comment:hover .post-element-comment-icon,
 .post-element-bookmark:hover .post-element-bookmark-icon,
-.post-element-settings:hover .post-element-settings-icon {
+.post-element-settings:hover .post-element-settings-icon,
+.new-post-icon:hover {
   background-color: hsl(206, 90%, 7%);
 }
 .post-element-retweet:hover {
@@ -241,4 +245,72 @@
 
 .who-to-follow-users-container{
   width: 100%;
+}
+
+/* new post element */
+
+.new-post-element{
+  margin: 50px;
+  /* change - delete margin later */
+  background-color: black;
+  width: 600px;
+  /* change to 100% later */
+  height: 150px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.new-post-element-ls{
+  padding: 15px;
+}
+
+.new-post-element-rs{
+  padding: 15px 15px 15px 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.new-post-input{
+  background-color: inherit;
+  border: none;
+  color: white;
+  display: flex;
+  font-size: 1rem;
+  resize: none;
+}
+
+.new-post-input::-webkit-scrollbar {
+  background-color: black;
+  margin-left: 15px;
+}
+
+.new-post-input::-webkit-scrollbar-thumb {
+  background-color: rgb(37, 37, 37);
+  border-radius: 10px;
+}
+
+/* change later - make height adjustable based on text lenght */
+
+.new-post-input:focus{
+  outline: none;
+}
+
+.new-post-bs-ls{
+  color: hsl(206, 95%, 55%);
+  display: flex;
+}
+
+.new-post-element-rs-bs{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+} 
+
+.new-post-bs-rs button{
+  height: 35px;
+  margin: 0;
+  width: 70px;
+  text-align: center;
+  padding: 0;
 }

@@ -15,6 +15,7 @@ import CreateBioCard from "./components/cards/CreateBioCard";
 import SaveChangesCard from "./components/cards/SaveChangesCard";
 import PickHeaderCard from "./components/cards/PickHeaderCard";
 import WhoToFollowElement from "./components/small_elements/WhoToFollowElement";
+import NewPostElment from "./components/small_elements/NewPostElement";
 
 function App() {
   return (
@@ -34,10 +35,11 @@ function App() {
       <h1 className="temporary-note">Page elements</h1>
       {/* page elements */}
       <div className="temporary-div">
+      <NewPostElment />
       <PostElement />
       <SearchElement />
-      <Navbar />
       <WhoToFollowElement />
+      <Navbar />
       </div>
 
       <h1 className="temporary-note">Sign in cards</h1>
