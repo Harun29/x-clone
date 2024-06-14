@@ -406,3 +406,34 @@ input[type="text"][disabled] {
   bottom: -50px;
   left: 15px;
 }
+
+/* new post card */
+
+.new-post-card{
+  margin: 50px;
+  /* change - delete margin later */
+  background-color: black;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  width: 500px;
+  /* change to 100% later */
+  border-radius: 10px;
+  height: 250px;
+}
+
+.new-post-card-ts{
+  margin-top: 35px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.new-post-card-ts img{
+  margin-right: 15px;
+}
+.new-post-card-bs{
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -16,12 +16,14 @@ import SaveChangesCard from "./components/cards/SaveChangesCard";
 import PickHeaderCard from "./components/cards/PickHeaderCard";
 import WhoToFollowElement from "./components/small_elements/WhoToFollowElement";
 import NewPostElment from "./components/small_elements/NewPostElement";
+import NewPostCard from "./components/cards/NewPostCard";
 
 function App() {
   return (
     <div className="App">
 
       <SignUpPage />
+      <NewPostCard />
 
       <h1 className="temporary-note">Profile customization</h1>
       <div className="temporary-div">
