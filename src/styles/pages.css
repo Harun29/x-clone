@@ -207,28 +207,22 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  overflow: auto;
 }
-
-.home-page-container{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0 10%;
-}
-
 .home-page-posts-section{
-  width: calc(100% - 630px);
+  width: 600px;
 }
 .home-page-navbar-section{
-  position: fixed;
-  left: 10%;
+  position: sticky;
+  top: 0;
   height: 100%;
   width: 300px;
 }
 .home-page-right-section{
-  position: fixed;
-  right: 10%;
+  position: sticky;
+  top: 0;
   height: 100%;
   width: 300px;
+  margin-left: 15px;
 }
+

@@ -23,46 +23,8 @@ function App() {
   return (
     <div className="App">
 
-      <HomePage />
       {/* <SignUpPage /> */}
-      {/* <NewPostCard /> */}
-
-      {/* <h1 className="temporary-note">Profile customization</h1> */}
-      <div className="temporary-div">
-      {/* customize profle */}
-      {/* <LocationCard />
-      <CreateBioCard/>
-      <SaveChangesCard />
-      <PickHeaderCard /> */}
-      </div>
-      
-      {/* <h1 className="temporary-note">Page elements</h1> */}
-      {/* page elements */}
-      <div className="temporary-div">
-      {/* <NewPostElment />
-      <PostElement />
-      <SearchElement />
-      <WhoToFollowElement />
-      <Navbar /> */}
-      </div>
-
-      {/* <h1 className="temporary-note">Sign in cards</h1> */}
-      {/* sign in - in this order */}
-      <div className="temporary-div">
-      {/* <SignInCard />
-      <LoginPasswordCard /> */}
-      </div>
-
-      {/* <h1 className="temporary-note">Sign up cards</h1> */}
-      {/* sign up - in this order */}
-      <div className="temporary-div">
-      {/* <CreateAccountCard />
-      <VerivicationCard />
-      <PasswordCard />
-      <ProfilePictureCard />
-      <UsernameCard />
-      <FollowInitialAccountsCard /> */}
-      </div>
+      <HomePage />
     </div>
   );
 }
