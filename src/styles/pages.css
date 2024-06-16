@@ -95,7 +95,7 @@
   transition: all 0.2s ease;
 }
 
-.create-account-button:hover{
+.create-account-button:hover {
   background-color: hsl(206, 95%, 45%);
 }
 
@@ -106,7 +106,7 @@
   transition: all 0.2s ease;
 }
 
-.sign-in-button:hover{
+.sign-in-button:hover {
   background-color: hsl(206, 95%, 5%);
 }
 
@@ -203,26 +203,28 @@
 
 /* home page */
 
-.home-page{
+.home-page {
   height: 100vh;
   display: flex;
   justify-content: center;
   overflow: auto;
 }
-.home-page-posts-section{
-  width: 600px;
-}
-.home-page-navbar-section{
+
+.home-page-navbar-section {
   position: sticky;
   top: 0;
   height: 100%;
   width: 300px;
 }
-.home-page-right-section{
+
+.home-page-posts-section {
+  width: 600px;
+}
+
+.home-page-right-section {
   position: sticky;
   top: 0;
   height: 100%;
   width: 300px;
   margin-left: 15px;
 }
-

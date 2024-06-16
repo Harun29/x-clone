@@ -1,4 +1,5 @@
 import Navbar from "../page_elements/Navbar";
+import CommentedPostElement from "../small_elements/CommentedPostElement";
 import NewPostElment from "../small_elements/NewPostElement";
 import PostElement from "../small_elements/PostElement";
 import SearchElement from "../small_elements/SearchElement";
@@ -12,7 +13,7 @@ const HomePage = () => {
         </div>
         <div className="home-page-posts-section">
           <NewPostElment />
-          <PostElement />
+          <CommentedPostElement />
           <PostElement />
           <PostElement />
           <PostElement />
