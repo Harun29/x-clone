@@ -48,7 +48,7 @@
 }
 
 .post-element-left-side {
-  padding: 15px;
+  padding: 15px 0 15px 15px;
   position: relative;
 }
 
@@ -322,5 +322,5 @@
   width: 2px;
   background-color: rgb(47, 51, 54);
   position: absolute;
-  right: calc(50% - 1px);
+  right: calc(50% - 9px);
 }
