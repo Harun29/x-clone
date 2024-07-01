@@ -19,6 +19,7 @@ import NewPostElment from "./components/small_elements/NewPostElement";
 import NewPostCard from "./components/cards/NewPostCard";
 import HomePage from "./components/pages/HomePage";
 import ProfileDetail from "./components/page_elements/ProfileDetails";
+import ProfilePage from "./components/pages/ProfilePage";
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
 
       {/* <SignUpPage /> */}
       {/* <HomePage /> */}
-      <ProfileDetail />
+      <ProfilePage />
+      {/* <ProfileDetail /> */}
     </div>
   );
 }

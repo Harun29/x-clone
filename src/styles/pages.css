@@ -210,18 +210,18 @@
   overflow: auto;
 }
 
-.home-page-navbar-section {
+.left-section {
   position: sticky;
   top: 0;
   height: 100%;
   width: 300px;
 }
 
-.home-page-posts-section {
+.middle-section {
   width: 600px;
 }
 
-.home-page-right-section {
+.right-section {
   position: sticky;
   top: 0;
   height: 100%;

@@ -1,19 +1,18 @@
 import Navbar from "../page_elements/Navbar";
+import ProfileDetail from "../page_elements/ProfileDetails";
 import CommentedPostElement from "../small_elements/CommentedPostElement";
-import NewPostElment from "../small_elements/NewPostElement";
 import PostElement from "../small_elements/PostElement";
 import SearchElement from "../small_elements/SearchElement";
 import WhoToFollowElement from "../small_elements/WhoToFollowElement";
 
-const HomePage = () => {
+const ProfilePage = () => {
   return (
     <div className="home-page">
         <div className="left-section">
           <Navbar />
         </div>
         <div className="middle-section">
-          <NewPostElment />
-          <CommentedPostElement />
+          <ProfileDetail />
           <PostElement />
           <PostElement />
           <PostElement />
@@ -39,4 +38,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default ProfilePage;

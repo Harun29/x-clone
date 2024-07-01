@@ -327,17 +327,10 @@
 
 /* PROFILE DETAIL */
 
-body{
-  background-color: white;
-  /* change later - delete */
-}
-
 .profile-detail{
-  width: 600px;
-  /* change later-delete */
-  margin: 50px;
-  /* change later - delete */
   background-color: black;
+  border: 1px solid rgb(47, 51, 54);
+  border-top: none;
 }
 
 .pd-cover-and-profile{
