@@ -18,13 +18,15 @@ import WhoToFollowElement from "./components/small_elements/WhoToFollowElement";
 import NewPostElment from "./components/small_elements/NewPostElement";
 import NewPostCard from "./components/cards/NewPostCard";
 import HomePage from "./components/pages/HomePage";
+import ProfileDetail from "./components/page_elements/ProfileDetails";
 
 function App() {
   return (
     <div className="App">
 
       {/* <SignUpPage /> */}
-      <HomePage />
+      {/* <HomePage /> */}
+      <ProfileDetail />
     </div>
   );
 }

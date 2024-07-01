@@ -324,3 +324,115 @@
   position: absolute;
   right: calc(50% - 9px);
 }
+
+/* PROFILE DETAIL */
+
+body{
+  background-color: white;
+  /* change later - delete */
+}
+
+.profile-detail{
+  width: 600px;
+  /* change later-delete */
+  margin: 50px;
+  /* change later - delete */
+  background-color: black;
+}
+
+.pd-cover-and-profile{
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.pd-cover-picture{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pd-profile-picture{
+  position: absolute;
+  bottom: -70px;
+  left: 20px;
+}
+
+.pd-profile-picture .medium-profile-picture{
+  outline: 5px solid black;
+  width: 130px;
+  height: 130px;
+}
+
+.pd-interactions{
+  display: flex;
+  justify-content: end;
+  padding: 10px 20px;
+  margin-bottom: 35px;
+}
+
+.pd-information{
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pd-information .users-name{
+  color: white !important;
+  font-size: 1.3rem;
+}
+
+.pd-information .users-at{
+  font-size: 1rem;
+}
+
+.pd-bio{
+  color: white;
+  padding: 0 20px;
+}
+
+.pd-stats{
+  color: white;
+  display: flex;
+  padding: 0 20px;
+}
+
+.pd-stats p{
+  margin: 0;
+  margin-right: 25px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.pd-navigation{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.interaction-container{
+  width: 60px;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 10px 0px;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+.interaction-container.active{
+  color: white;
+  font-weight: 500;
+}
+
+.interaction-container.active .bottom-line{
+  display: block;
+}
+
+.pd-navigation .bottom-line{
+  background-color: hsl(206, 95%, 55%);
+  height: 5px;
+  border-radius: 2px;
+  display: none;
+}
