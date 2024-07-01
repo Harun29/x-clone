@@ -5,6 +5,7 @@ import BookmarkIcon from "../../icons/BookmarkIcon";
 import ProfileIcon from "../../icons/ProfileIcon";
 import SettingsIcon from "../../icons/SettingsIcon";
 import DotsIcon from "../../icons/DotsIcon";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -13,10 +14,12 @@ const Navbar = () => {
         <div className="navbar-element">
           <img src="xlogo.png" alt="" />
         </div>
+          <Link to={"/"}>
         <div className="navbar-element">
           <HomeIcon />
-          <span>Home</span>
+            <span>Home</span>
         </div>
+          </Link>
         <div className="navbar-element">
           <SearchIcon />
           <span>Explore</span>
@@ -25,10 +28,12 @@ const Navbar = () => {
           <BookmarkIcon />
           <span>Bookmarks</span>
         </div>
+          <Link to={"/profile"}>
         <div className="navbar-element">
           <ProfileIcon />
-          <span>Profile</span>
+            <span>Profile</span>
         </div>
+          </Link>
         <div className="navbar-element">
           <SettingsIcon />
           <span>Settings</span>

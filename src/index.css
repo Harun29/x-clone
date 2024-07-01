@@ -13,6 +13,11 @@ code {
     monospace;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 .temporary-note{
   margin-top: 100px;
   display: flex;
