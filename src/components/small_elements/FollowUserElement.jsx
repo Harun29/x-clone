@@ -6,7 +6,7 @@ const FollowUserElement = ({description}) => {
   const [showDescription, setShowDescription] = useState(true);
 
   useEffect(() => {
-    if (!description && description != undefined){
+    if (!description && description !== undefined){
       setShowDescription(false)
     }else{
       setShowDescription(true)

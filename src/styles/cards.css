@@ -462,3 +462,7 @@ input[type="text"][disabled] {
 .new-post-input{
   padding: 10px 0 0 0;
 }
+
+.users-at-in-reply-card{
+  color: hsl(206, 95%, 55%);
+}

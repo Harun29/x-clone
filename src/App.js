@@ -2,8 +2,6 @@ import HomePage from "./components/pages/HomePage";
 import ProfilePage from "./components/pages/ProfilePage";
 import SignUpPage from "./components/pages/SignUpPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ReplyCard from "./components/cards/ReplyCard";
-import CommentedPostElement from "./components/small_elements/CommentedPostElement";
 
 function App() {
   return (

@@ -32,7 +32,7 @@ const ReplyCard = () => {
             Quisque ornare eget urna in pellentesque. Vivamus sed urna enim.
           </p>
           <div className="post-element-interactions">
-            <span className="note reply-note">Replying to <span className="users-at">@elonmusk</span></span>
+            <span className="note reply-note">Replying to <span className="users-at users-at-in-reply-card">@elonmusk</span></span>
           </div>
         </div>
       </div>
