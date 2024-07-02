@@ -437,3 +437,28 @@ input[type="text"][disabled] {
   display: flex;
   justify-content: space-between;
 }
+
+/* REPLY CARD */
+
+.reply-card{
+  height: auto;
+}
+
+.reply-element{
+  width: auto;
+  height: auto;
+  margin-top: 40px;
+}
+
+.reply-ms{
+  margin-top: 0px;
+  height: 100px;
+}
+
+.reply-note{
+  margin-bottom: 0;
+}
+
+.new-post-input{
+  padding: 10px 0 0 0;
+}
