@@ -6,6 +6,9 @@ import SearchElement from "../small_elements/SearchElement";
 import WhoToFollowElement from "../small_elements/WhoToFollowElement";
 
 const HomePage = () => {
+
+  
+
   return (
     <div className="home-page">
         <div className="left-section">
