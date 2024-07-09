@@ -1,4 +1,11 @@
-const ProfileDetail = () => {
+import { useEffect } from "react";
+import { useAuth } from "../../context/AuthContext";
+
+const ProfileDetail = ({userType}) => {
+
+  const {currentUser} = useAuth();
+
+
   return (
     <div className="profile-detail">
       <div className="pd-cover-and-profile">
@@ -12,25 +19,23 @@ const ProfileDetail = () => {
         </div>
       </div>
       <div className="pd-interactions">
-        <button className="follow-button">Follow</button>
+        <button className="follow-button">{(userType === "current-user") ? "Edit profile" : "Follow"}</button>
       </div>
       <div className="pd-information">
-        <span className="users-name">Harun</span>
-        <span className="users-at">@Harun29</span>
+        <span className="users-name">{currentUser ? currentUser.name : ""}</span>
+        <span className="users-at">@{currentUser ? currentUser.username : ""}</span>
       </div>
       <div className="pd-bio">
         <p className="users-bio">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-          semper, justo sed ultricies venenatis, mi odio lacinia purus, in
-          vestibulum leo metus eu massa.
+          {currentUser ? currentUser.bio : ""}
         </p>
       </div>
       <div className="pd-stats">
         <p>
-          1,999 <span className="note">following</span>
+          {currentUser ? currentUser.noFollowing : 0} <span className="note">following</span>
         </p>
         <p>
-          29.9M <span className="note">followers</span>
+          {currentUser ? currentUser.noFollowers : 0} <span className="note">followers</span>
         </p>
       </div>
       <div className="pd-navigation">
