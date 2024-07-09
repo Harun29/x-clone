@@ -14,18 +14,6 @@ const HomePage = () => {
   const { currentUser } = useAuth();
 
   useEffect(() => {
-    if (currentUser) {
-      console.log(currentUser.username);
-    }
-  }, [currentUser]);
-
-  useEffect(() => {
-    if (posts) {
-      console.log(posts);
-    }
-  }, [posts]);
-
-  useEffect(() => {
     const fetchPosts = async (username) => {
       const response = await getPostsByFollowing(username);
       setPosts(response);
