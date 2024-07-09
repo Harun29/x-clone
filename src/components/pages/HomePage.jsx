@@ -9,45 +9,58 @@ import { usePosts } from "../../context/PostsContext";
 import { useAuth } from "../../context/AuthContext";
 
 const HomePage = () => {
-
   const [posts, setPosts] = useState();
-  const {getPostsByFollowing} = usePosts();
-  const {currentUser} = useAuth();
+  const { getPostsByFollowing } = usePosts();
+  const { currentUser } = useAuth();
 
   useEffect(() => {
-    console.log(currentUser)
-  }, [currentUser])
-  
+    if (currentUser) {
+      console.log(currentUser.username);
+    }
+  }, [currentUser]);
+
+  useEffect(() => {
+    if (posts) {
+      console.log(posts);
+    }
+  }, [posts]);
+
+  useEffect(() => {
+    const fetchPosts = async (username) => {
+      const response = await getPostsByFollowing(username);
+      setPosts(response);
+    };
+    if (currentUser) {
+      fetchPosts(currentUser.username);
+    }
+  }, [currentUser, getPostsByFollowing]);
 
   return (
     <div className="home-page">
-        <div className="left-section">
-          <Navbar />
-        </div>
-        <div className="middle-section">
-          <NewPostElment />
-          <CommentedPostElement />
-          <PostElement />
-          <PostElement />
-          <PostElement />
-          <PostElement />
-          <PostElement />
-          <PostElement />
-          <PostElement />
-          <PostElement />
-          <PostElement />
-          <PostElement />
-          <PostElement />
-          <PostElement />
-          <PostElement />
-          <PostElement />
-          <PostElement />
-          <PostElement />
-        </div>
-        <div className="right-section">
-          <SearchElement />
-          <WhoToFollowElement />
-        </div>
+      <div className="left-section">
+        <Navbar />
+      </div>
+      <div className="middle-section">
+        <NewPostElment />
+        {/* <CommentedPostElement /> */}
+        {posts
+          ? posts.map((post) => (
+              <PostElement
+                content={post.postContent}
+                name={post.userPostedNavigation.name}
+                username={post.userPostedNavigation.username}
+                noComments={post.noComments}
+                noReposts={post.noReposts}
+                noLikes={post.noLikes}
+                profilePicture={post.userPostedNavigation.profilePicture}
+              />
+            ))
+          : null}
+      </div>
+      <div className="right-section">
+        <SearchElement />
+        <WhoToFollowElement />
+      </div>
     </div>
   );
 };

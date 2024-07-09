@@ -25,7 +25,11 @@ export function PostsProvider({ children }){
   }
 
   const getPostsByFollowing = async (username) => {
-    const response = await fetch(`/api/post/followingPosts/${username}`);
+    const response = await fetch(`https://localhost:7104/api/Post/followingPosts/${username}`, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
     if (!response.ok) {
         throw new Error('Failed to fetch posts from following users');
     }
