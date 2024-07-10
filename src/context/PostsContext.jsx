@@ -51,7 +51,7 @@ export function PostsProvider({ children }){
   };
 
   const deletePost = async (postID) => {
-    const response = await fetch(`/api/post/deletePost/${postID}`, {
+    const response = await fetch(`https://localhost:7104/api/Post/deletePost/${postID}`, {
         method: 'DELETE',
     });
     if (!response.ok) {

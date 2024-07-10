@@ -4,10 +4,43 @@ import HeartIcon from "../../icons/HeartIcon";
 import ArrowsIcon from "../../icons/ArrowsIcon";
 import DotsIcon from "../../icons/DotsIcon";
 import { useEffect, useState } from "react";
+import { usePosts } from "../../context/PostsContext";
+import { useAuth } from "../../context/AuthContext";
+import XIcon from "../../icons/XIcon";
 
-const PostElement = ({content, name, username, noComments, noReposts, noLikes, type}) => {
+const PostElement = ({content, name, username, noComments, noReposts, noLikes, type, postId}) => {
 
   const [profilePicture, setProfilePicture] = useState();
+  const [editActive, setEditActive] = useState(false);
+  const { deletePost, updatePost } = usePosts();
+  const { currentUser } = useAuth();
+  const [edit, setEdit] = useState();
+  const [postContent, setPostContent] = useState("");
+
+  useEffect(() => {
+    if(content){
+      setPostContent(content)
+    }
+  }, [edit, content])
+
+  const deletePostCommand = async() => {
+    try{
+      await deletePost(postId)
+      setEditActive(false)
+    }catch(err){
+      console.error(err)
+    }
+  }
+
+  const editPost = async() => {
+    try{
+      await updatePost(postId, currentUser.userId, postContent)
+      setEdit(false)
+      setEditActive(false)
+    }catch(err){
+      console.error(err);
+    }
+  }
 
   useEffect(() =>{
     if(type === "profile"){
@@ -34,14 +67,25 @@ const PostElement = ({content, name, username, noComments, noReposts, noLikes, t
             <span className="users-at">@{username ? username : ""}</span>
           </div>
           <div className="post-element-settings">
-            <div className="post-element-settings-icon">
-              <DotsIcon />
+            <div onClick={() => setEditActive(!editActive)} className="post-element-settings-icon">
+              {!editActive ? 
+              <DotsIcon /> :
+              <XIcon />}
             </div>
+            {(type === "profile" && editActive) ? 
+            <div className="edit-post-element">
+              {!edit ? <button onClick={deletePostCommand}>Delete</button>:
+              <button onClick={() => setEdit(false)}>Discard</button>}
+              <div className="line"></div>
+              {!edit ? <button onClick={() => setEdit(true)}>Edit</button>:
+              <button onClick={editPost}>Save</button>}
+            </div> : null}
           </div>
         </div>
-        <p className="post-paragraph">
+        {!edit ? <p className="post-paragraph">
           {content ? content : ""}
-        </p>
+        </p> : 
+        <textarea className="post-paragraph-edit" onChange={(e) => setPostContent(e.target.value)} value={postContent}></textarea>}
         <div className="post-element-interactions">
           <div className="post-element-comment">
             <div className="post-element-comment-icon">

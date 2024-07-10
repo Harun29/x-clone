@@ -49,6 +49,7 @@ const ProfilePage = () => {
                 noReposts={post.noReposts}
                 noLikes={post.noLikes}
                 type="profile"
+                postId={post.postId}
               />
             ))
           : null}

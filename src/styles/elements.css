@@ -71,6 +71,35 @@
 .post-element-settings {
   color: rgba(255, 255, 255, 0.3);
   cursor: pointer;
+  position: relative;
+}
+
+.edit-post-element{
+  position: absolute;
+  top: 40px;
+  background-color: black;
+  padding: 15px;
+  border: 1px solid rgb(37, 37, 37);
+  border-radius: 10px;
+}
+
+.edit-post-element button{
+  background-color: inherit;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.line{
+  height: 1px;
+  background-color: rgb(47, 51, 54);
+  margin: 5px 0;
+}
+
+.edit-post-element button:hover{
+  color: hsl(206, 95%, 55%);
 }
 
 .post-element-right-side {
@@ -145,6 +174,14 @@
 
 .post-paragraph {
   margin: 0 0 10px;
+}
+
+.post-paragraph-edit{
+  background-color: inherit;
+  color: white;
+  width: calc(100% - 50px);
+  resize: none;
+  height: 100px;
 }
 
 /* search element */
