@@ -98,7 +98,7 @@ const PostElement = ({content, name, username, noComments, noReposts, noLikes, t
     <div className="post-element-container">
     {reposted && <div className="repost-label">
       <ArrowsIcon />
-      <span>{type && currentUser.username}</span>
+      <span>{type ? currentUser.username : "korisnik_77"}</span>
       <span>reposted</span>
     </div>}
     <div className="post-element">
@@ -150,8 +150,8 @@ const PostElement = ({content, name, username, noComments, noReposts, noLikes, t
             <span>{noReposts ? noReposts : 0}</span>
           </div>
           <div onClick={(likedPosts.includes(postId)) ? handleDislike : handleLike} className="post-element-like">
-            <div className="post-element-like-icon">
-              <HeartIcon fill={(likedPosts.includes(postId)) && "red"}/>
+            <div className={!(likedPosts.includes(postId)) ? "post-element-like-icon" : "post-element-like-icon active"}>
+              <HeartIcon fill={(likedPosts.includes(postId)) && "red"} stroke={(likedPosts.includes(postId)) && "red"}/>
             </div>
             <span className={(likedPosts.includes(postId)) && "likes-number-active"}>{noLikes ? noLikes : 0}</span>
           </div>
