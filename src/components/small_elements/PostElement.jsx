@@ -8,11 +8,11 @@ import { usePosts } from "../../context/PostsContext";
 import { useAuth } from "../../context/AuthContext";
 import XIcon from "../../icons/XIcon";
 
-const PostElement = ({content, name, username, noComments, noReposts, noLikes, type, postId}) => {
+const PostElement = ({content, name, username, noComments, noReposts, noLikes, type, postId, reposted}) => {
 
   const [profilePicture, setProfilePicture] = useState();
   const [editActive, setEditActive] = useState(false);
-  const { deletePost, updatePost } = usePosts();
+  const { deletePost, updatePost, repost } = usePosts();
   const { currentUser } = useAuth();
   const [edit, setEdit] = useState();
   const [postContent, setPostContent] = useState("");
@@ -43,14 +43,46 @@ const PostElement = ({content, name, username, noComments, noReposts, noLikes, t
   }
 
   useEffect(() =>{
-    if(type === "profile"){
+    if(type === "profile" && !reposted){
       setProfilePicture("test-profile-picture.jpg")
     }else{
       setProfilePicture("dummy-photo.jpg")
     }
   }, [type])
 
+  const toggleEdit = () => {
+    if(type === "profile"){
+      setEditActive(!editActive)
+    }
+  }
+
+  const handleRepost = () => {
+    const repostPost = async(postid, userid) => {
+      await repost(postid, userid)
+      alert("reposted")
+    }
+    try{
+      repostPost(postId, currentUser.userId);
+    }catch(err){
+      console.error("error reposting: ", err)
+    }
+  }
+
+  useEffect(() => {
+    console.log(postId, currentUser.userId)
+  }, [postId, currentUser])
+
+  // const handleLike = () => {
+
+  // }
+
   return (
+    <div className="post-element-container">
+    {reposted && <div className="repost-label">
+      <ArrowsIcon />
+      <span>{currentUser.username}</span>
+      <span>reposted</span>
+    </div>}
     <div className="post-element">
       <div className="post-element-left-side">
         <img
@@ -67,7 +99,7 @@ const PostElement = ({content, name, username, noComments, noReposts, noLikes, t
             <span className="users-at">@{username ? username : ""}</span>
           </div>
           <div className="post-element-settings">
-            <div onClick={() => setEditActive(!editActive)} className="post-element-settings-icon">
+            <div onClick={toggleEdit} className="post-element-settings-icon">
               {!editActive ? 
               <DotsIcon /> :
               <XIcon />}
@@ -93,7 +125,7 @@ const PostElement = ({content, name, username, noComments, noReposts, noLikes, t
             </div>
             <span>{noComments ? noComments : 0}</span>
           </div>
-          <div className="post-element-retweet">
+          <div onClick={handleRepost} className="post-element-retweet">
             <div className="post-element-retweet-icon">
               <ArrowsIcon />
             </div>
@@ -112,6 +144,7 @@ const PostElement = ({content, name, username, noComments, noReposts, noLikes, t
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

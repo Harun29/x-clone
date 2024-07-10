@@ -1,13 +1,29 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 
-const ProfileDetail = ({userType}) => {
+const ProfileDetail = ({username}) => {
 
-  const {currentUser} = useAuth();
+  const {currentUser, getUserByUsername} = useAuth();
+  const [user, setUser] = useState();
 
+  useEffect(() => {
+    const fetchUser = async() => {
+      const userData = await getUserByUsername(username);
+      setUser(userData)
+    }
+    if(!username){
+      setUser(currentUser)
+    }else{
+      fetchUser()
+    }
+  }, [username, getUserByUsername, currentUser])
 
-  return (
-    <div className="profile-detail">
+  useEffect(() => {
+    console.log("aaaaaaaaaaaaaaaa:", user)
+  }, [user])
+
+  return (user && 
+    (<div className="profile-detail">
       <div className="pd-cover-and-profile">
         <img src="test-cover-picture.jpg" alt="" className="pd-cover-picture" />
         <div className="pd-profile-picture">
@@ -19,23 +35,23 @@ const ProfileDetail = ({userType}) => {
         </div>
       </div>
       <div className="pd-interactions">
-        <button className="follow-button">{(userType === "current-user") ? "Edit profile" : "Follow"}</button>
+        <button className="follow-button">{(!username) ? "Edit profile" : "Follow"}</button>
       </div>
       <div className="pd-information">
-        <span className="users-name">{currentUser ? currentUser.name : ""}</span>
-        <span className="users-at">@{currentUser ? currentUser.username : ""}</span>
+        <span className="users-name">{user.name}</span>
+        <span className="users-at">@{user.username}</span>
       </div>
       <div className="pd-bio">
         <p className="users-bio">
-          {currentUser ? currentUser.bio : ""}
+          {user.bio}
         </p>
       </div>
       <div className="pd-stats">
         <p>
-          {currentUser ? currentUser.noFollowing : 0} <span className="note">following</span>
+          {user.noFollowing} <span className="note">following</span>
         </p>
         <p>
-          {currentUser ? currentUser.noFollowers : 0} <span className="note">followers</span>
+          {user.noFollowers} <span className="note">followers</span>
         </p>
       </div>
       <div className="pd-navigation">
@@ -52,7 +68,7 @@ const ProfileDetail = ({userType}) => {
           <div className="bottom-line"></div>
         </div>
       </div>
-    </div>
+    </div>)
   );
 };
 

@@ -74,13 +74,30 @@ export function PostsProvider({ children }){
     return await response.text();
   };
 
+  const repost = async (postId, userId) => {
+    const response = await fetch(`https://localhost:7104/api/Repost/AddRepost?postReposted=${postId}`, {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userId)
+    });
+    
+    if (!response.ok) {
+      throw new Error("failed reposting");
+    }
+    
+    return await response.text("reposted");
+  };
+
   const value = {
     getPostById,
     getPostsByUser,
     getPostsByFollowing,
     createPost,
     deletePost,
-    updatePost
+    updatePost,
+    repost
   }
 
   return (

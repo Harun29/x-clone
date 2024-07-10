@@ -15,6 +15,7 @@ function App() {
               <Route path="/" Component={HomePage}/>
               <Route path="/profile" Component={ProfilePage}/>
               <Route path="/signup" Component={SignUpPage}/>
+              <Route path="/user/:username" Component={ProfilePage} />
             </Routes>
           </Router>
         </div>

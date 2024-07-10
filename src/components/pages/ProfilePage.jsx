@@ -6,27 +6,30 @@ import PostElement from "../small_elements/PostElement";
 import SearchElement from "../small_elements/SearchElement";
 import WhoToFollowElement from "../small_elements/WhoToFollowElement";
 import { useAuth } from "../../context/AuthContext";
+import { useParams } from "react-router-dom";
 
 const ProfilePage = () => {
 
   const {getPostsByUser} = usePosts();
   const {currentUser} = useAuth();
   const [posts, setPost] = useState([]);
-  // const [username, setUsername] = useState()
-  
+  const {username} = useParams();
+
   useEffect(() => {
-    const festchPosts = async(username) => {
+    const fetchPosts = async(username) => {
       const response = await getPostsByUser(username);
       setPost(response)
     }
     try{
-      if(currentUser){
-        festchPosts(currentUser.username)
+      if(!username){
+        fetchPosts(currentUser.username)
+      }else{
+        fetchPosts(username)
       }
     }catch(err){
       console.error(err)
     }
-  }, [currentUser, getPostsByUser])
+  }, [currentUser, getPostsByUser, username])
 
   useEffect(() => {
     console.log(posts)
@@ -38,7 +41,7 @@ const ProfilePage = () => {
           <Navbar />
         </div>
         <div className="middle-section">
-          <ProfileDetail userType="current-user"/>
+          <ProfileDetail username={username ? username : ""}/>
           {posts
           ? posts.map((post) => (
               <PostElement
@@ -48,10 +51,11 @@ const ProfilePage = () => {
                 noComments={post.noComments}
                 noReposts={post.noReposts}
                 noLikes={post.noLikes}
-                type="profile"
+                type={username ? "public" : "profile"}
                 postId={post.postId}
+                reposted={post.userPostedNavigation.username !== currentUser.username && true}
               />
-            ))
+            ))  
           : null}
         </div>
         <div className="right-section">
