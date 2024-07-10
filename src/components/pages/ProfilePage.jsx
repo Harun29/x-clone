@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { usePosts } from "../../context/PostsContext";
 import Navbar from "../page_elements/Navbar";
 import ProfileDetail from "../page_elements/ProfileDetails";
-import CommentedPostElement from "../small_elements/CommentedPostElement";
 import PostElement from "../small_elements/PostElement";
 import SearchElement from "../small_elements/SearchElement";
 import WhoToFollowElement from "../small_elements/WhoToFollowElement";
@@ -27,7 +26,11 @@ const ProfilePage = () => {
     }catch(err){
       console.error(err)
     }
-  }, [])
+  }, [currentUser, getPostsByUser])
+
+  useEffect(() => {
+    console.log(posts)
+  }, [posts])
 
   return (
     <div className="home-page">
@@ -45,7 +48,7 @@ const ProfilePage = () => {
                 noComments={post.noComments}
                 noReposts={post.noReposts}
                 noLikes={post.noLikes}
-                profilePicture={post.userPostedNavigation.profilePicture}
+                type="profile"
               />
             ))
           : null}

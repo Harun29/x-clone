@@ -3,15 +3,26 @@ import CommentsIcon from "../../icons/CommentsIcon";
 import HeartIcon from "../../icons/HeartIcon";
 import ArrowsIcon from "../../icons/ArrowsIcon";
 import DotsIcon from "../../icons/DotsIcon";
+import { useEffect, useState } from "react";
 
-const PostElement = ({content, name, username, noComments, noReposts, noLikes, profilePicture}) => {
+const PostElement = ({content, name, username, noComments, noReposts, noLikes, type}) => {
+
+  const [profilePicture, setProfilePicture] = useState();
+
+  useEffect(() =>{
+    if(type === "profile"){
+      setProfilePicture("test-profile-picture.jpg")
+    }else{
+      setProfilePicture("dummy-photo.jpg")
+    }
+  }, [type])
 
   return (
     <div className="post-element">
       <div className="post-element-left-side">
         <img
           // src={`data:image/jpeg;base64,${profilePicture}`}
-          src="dummy-photo.jpg"
+          src={profilePicture}
           alt=""
           className="small-profile-picture"
         />
