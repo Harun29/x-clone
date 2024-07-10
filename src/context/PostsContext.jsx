@@ -89,6 +89,34 @@ export function PostsProvider({ children }){
     
     return await response.text("reposted");
   };
+  const like = async (postId, userId) => {
+    const response = await fetch(`https://localhost:7104/api/Like?postId=${postId}&userId=${userId}`, {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    });
+    
+    if (!response.ok) {
+      throw new Error("failed likeing");
+    }
+    
+    return await response.text("liked");
+  };
+
+  const dislike = async (userId, postId) => {
+    const response = await fetch(`https://localhost:7104/api/Like?userId=${userId}&postId=${postId}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+    if(!response.ok){
+      throw new Error("failed dislikeing");
+    }
+
+    return await response.text("deleted like")
+  }
 
   const value = {
     getPostById,
@@ -97,7 +125,9 @@ export function PostsProvider({ children }){
     createPost,
     deletePost,
     updatePost,
-    repost
+    repost,
+    like,
+    dislike
   }
 
   return (

@@ -12,10 +12,14 @@ const PostElement = ({content, name, username, noComments, noReposts, noLikes, t
 
   const [profilePicture, setProfilePicture] = useState();
   const [editActive, setEditActive] = useState(false);
-  const { deletePost, updatePost, repost } = usePosts();
-  const { currentUser } = useAuth();
+  const { deletePost, updatePost, repost, like, dislike } = usePosts();
+  const { currentUser, likedPosts } = useAuth();
   const [edit, setEdit] = useState();
   const [postContent, setPostContent] = useState("");
+
+  useEffect(() => {
+    likedPosts && console.log(likedPosts)
+  }, [likedPosts])
 
   useEffect(() => {
     if(content){
@@ -68,13 +72,28 @@ const PostElement = ({content, name, username, noComments, noReposts, noLikes, t
     }
   }
 
-  useEffect(() => {
-    console.log(postId, currentUser.userId)
-  }, [postId, currentUser])
+  const handleLike = () => {
+    const likePost = async(postid, userid) => {
+      await like(postid, userid);
+    }
+    try{
+      likePost(postId, currentUser.userId)
+    }catch(err){
+      console.error("error liking: ", err);
+    }
+  }
 
-  // const handleLike = () => {
+  const handleDislike = () => {
+    const dislikePost = async(userid, postid) => {
+      await dislike(userid, postid)
+    }
+    try{
+      dislikePost(currentUser.userId, postId)
+    }catch(err){
+      console.error(err)
+    }
+  }
 
-  // }
 
   return (
     <div className="post-element-container">
@@ -131,11 +150,11 @@ const PostElement = ({content, name, username, noComments, noReposts, noLikes, t
             </div>
             <span>{noReposts ? noReposts : 0}</span>
           </div>
-          <div className="post-element-like">
+          <div onClick={(likedPosts.includes(postId)) ? handleDislike : handleLike} className="post-element-like">
             <div className="post-element-like-icon">
-              <HeartIcon />
+              <HeartIcon fill={(likedPosts.includes(postId)) && "red"}/>
             </div>
-            <span>{noLikes ? noLikes : 0}</span>
+            <span className={(likedPosts.includes(postId)) && "likes-number-active"}>{noLikes ? noLikes : 0}</span>
           </div>
           <div className="post-element-bookmark">
             <div className="post-element-bookmark-icon">

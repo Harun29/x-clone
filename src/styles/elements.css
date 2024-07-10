@@ -170,6 +170,11 @@
 .new-post-icon {
   transition: all 0.2s ease;
 }
+
+.likes-number-active{
+  color: white;
+}
+
 .post-element-comment:hover,
 .post-element-bookmark:hover,
 .post-element-settings:hover {
