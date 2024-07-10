@@ -266,6 +266,10 @@
   grid-template-rows: 1fr auto;
 }
 
+.new-post-element-button:disabled{
+  color: hsl(206, 95%, 35%);
+}
+
 .new-post-input{
   background-color: inherit;
   border: none;

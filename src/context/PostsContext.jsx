@@ -37,7 +37,7 @@ export function PostsProvider({ children }){
   };
 
   const createPost = async (userId, content) => {
-    const response = await fetch(`/api/post/create/${userId}`, {
+    const response = await fetch(`https://localhost:7104/api/Post/create/${userId}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ export function PostsProvider({ children }){
     if (!response.ok) {
         throw new Error('Failed to create post');
     }
-    return await response.json();
+    return await response.text("created post");
   };
 
   const deletePost = async (postID) => {
