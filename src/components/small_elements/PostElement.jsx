@@ -47,7 +47,7 @@ const PostElement = ({content, name, username, noComments, noReposts, noLikes, t
   }
 
   useEffect(() =>{
-    if(type === "profile" && !reposted){
+    if((type === "profile" && !reposted) || (!type && reposted)){
       setProfilePicture("test-profile-picture.jpg")
     }else{
       setProfilePicture("dummy-photo.jpg")
@@ -55,7 +55,7 @@ const PostElement = ({content, name, username, noComments, noReposts, noLikes, t
   }, [type])
 
   const toggleEdit = () => {
-    if(type === "profile"){
+    if(type === "profile" && !reposted){
       setEditActive(!editActive)
     }
   }
@@ -94,12 +94,11 @@ const PostElement = ({content, name, username, noComments, noReposts, noLikes, t
     }
   }
 
-
   return (
     <div className="post-element-container">
     {reposted && <div className="repost-label">
       <ArrowsIcon />
-      <span>{currentUser.username}</span>
+      <span>{type && currentUser.username}</span>
       <span>reposted</span>
     </div>}
     <div className="post-element">

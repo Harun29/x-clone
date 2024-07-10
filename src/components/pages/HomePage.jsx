@@ -42,6 +42,7 @@ const HomePage = () => {
                 noLikes={post.noLikes}
                 profilePicture={post.userPostedNavigation.profilePicture}
                 postId={post.postId}
+                reposted={post.userPostedNavigation.username === currentUser.username && true}
               />
             ))
           : null}
